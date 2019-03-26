@@ -16,9 +16,9 @@ For this project, we'll use three data sets:
 
 * [Kaggle credit card fraud competition data set](https://www.kaggle.com/mlg-ulb/creditcardfraud); download, unzip to get `creditcard.csv`
 
-* Get the cancer data [cancer.csv](https://github.com/JialiangShi/isolation-forest/blob/master/cancer.csv);
+* Download the cancer dataset: [cancer.csv](https://github.com/JialiangShi/isolation-forest/blob/master/cancer.csv);
 
-* Get the http data [http.csv](https://github.com/JialiangShi/isolation-forest/blob/master/http.csv); 
+* Download the http dataset: [http.csv](https://github.com/JialiangShi/isolation-forest/blob/master/http.csv); 
 
 My code assumes the data files are in the same directory as the code.
 

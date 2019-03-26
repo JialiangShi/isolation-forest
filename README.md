@@ -58,7 +58,7 @@ Using [plot_anomalies.py](https://github.com/JialiangShi/isolation-forest/blob/m
 
 ## Scoring results
 
-Using [score.py](https://github.com/parrt/msds689/blob/master/projects/iforest/score.py), here is a sample run:
+Using [score.py](https://github.com/JialiangShi/isolation-forest/blob/master/score.py), here is a sample run:
 
 ```
 Running noise=False improved=False

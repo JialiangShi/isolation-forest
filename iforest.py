@@ -208,6 +208,10 @@ def find_TPR_threshold(y, scores, desired_TPR):
                 FN += 1
         TPR = TP / (TP + FN)
         FPR = FP / (FP + TN)
+        
+        if threshold < 0:
+            print("The model cannot reach the desired TPR")
+            return
 
     return threshold, FPR
 

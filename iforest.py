@@ -65,15 +65,9 @@ class IsolationTree:
             self.root = LeafNode(X.shape[0], X)
             return self.root
 
-        # Choose Best Random Split Attributes and Value
+        # Choose Best (The Most unbalanced) Random Split Attributes and Value
         num_features = X.shape[1]
-
-        splitAtt_imp = np.random.randint(0, num_features)
-        splitVal_imp = np.random.uniform(min(X[:, splitAtt_imp]), max(X[:, splitAtt_imp]))
-        X_left_imp = X[X[:, splitAtt_imp] < splitVal_imp]
-        X_right_imp = X[X[:, splitAtt_imp] >= splitVal_imp]
-        ratio_imp = min(X_left_imp.shape[0]/(X_left_imp.shape[0]+X_right_imp.shape[0]),
-                        X_right_imp.shape[0]/(X_left_imp.shape[0]+X_right_imp.shape[0]))
+        ratio_imp = 0.5 # Intialize the samples ratio after split as 0.5
 
         for i in range(num_features):
             splitAtt = i

@@ -10,7 +10,7 @@ There are two general approaches to anomaly detection:
 
 The isolation forest algorithm is original and beautiful in its simplicity; and also seems to work very well, with a few known weaknesses. The academic paper is extremely readable so you should start there.
 
-## Data sets
+## Datasets
 
 For this project, we'll use three data sets:
 
@@ -58,7 +58,7 @@ Using [plot_anomalies.py](https://github.com/JialiangShi/isolation-forest/blob/m
 
 ## Scoring results
 
-Using [score.py](https://github.com/JialiangShi/isolation-forest/blob/master/score.py), here is a sample run:
+Running [score.py](https://github.com/JialiangShi/isolation-forest/blob/master/score.py), here is a sample run:
 
 ```
 Running noise=False improved=False
@@ -80,4 +80,4 @@ SUCCESS cancer.csv 1000 trees at desired TPR 75.0% getting FPR 0.2857%
 
 Due to the subsampling of the original data said and the inherent random nature of isolation forest, your results will differ even from run to run.  I'm hoping that the variance is not so high that valid programs fail the scoring, but let me know.
 
-The indicated required score values were set using my machine and my implementation. Then I gave a range above that that are still considered to be valid.
+Hooray !

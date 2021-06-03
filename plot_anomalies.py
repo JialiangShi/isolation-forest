@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
-from sklearn.metrics import accuracy_score, r2_score, mean_absolute_error, \
-    confusion_matrix, f1_score, average_precision_score
+from sklearn.metrics import accuracy_score, r2_score, mean_absolute_error, confusion_matrix, f1_score, average_precision_score
 import matplotlib.pyplot as plt
 import sys
 import time

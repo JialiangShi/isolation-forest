@@ -34,7 +34,7 @@ class IsolationTree:
         Given a 2D matrix of observations, create an isolation tree. Set field
         self.root to the root of that tree and return it.
 
-        If you are working on an improved algorithm, check parameter "improved"
+        If you are looking for an improved algorithm, check parameter "improved"
         and switch to your new functionality else fall back on your original code.
         """
         if improved:
@@ -214,44 +214,3 @@ def find_TPR_threshold(y, scores, desired_TPR):
             return
 
     return threshold, FPR
-
-
-# def find_TPR_threshold(y, scores, desired_TPR):
-#     """
-#     Start at score threshold 1.0 and work down until we hit desired TPR.
-#     Step by 0.01 score increments. For each threshold, compute the TPR
-#     and FPR to see if we've reached to the desired TPR. If so, return the
-#     score threshold and FPR.
-#     """
-#     TPR = 0
-#     FPR = 0
-#     res = []
-#     for threshold in np.arange(0, 1, 0.01):
-#         prediction = [1 if s > threshold else 0 for s in scores]
-#         TP = 0
-#         FP = 0
-#         TN = 0
-#         FN = 0
-#         for p, label in zip(prediction, y):
-#             if p == 1 and label == 1:
-#                 TP += 1
-#             if p == 0 and label == 0:
-#                 TN += 1
-#             if p == 1 and label == 0:
-#                 FP += 1
-#             if p == 0 and label == 1:
-#                 FN += 1
-#         TPR = TP/(TP+FN)
-#         FPR = FP/(FP+TN)
-#         res.append((threshold, TPR, FPR))
-#     best_sol = []
-#     for r in res:
-#         if r[1]>desired_TPR:
-#             best_sol.append(r)
-#     best_threshold = 1
-#     best_FPR = 1
-#     for b in best_sol:
-#         if b[2] <= best_FPR:
-#             best_threshold = b[0]
-#             best_FPR = b[2]
-#     return best_threshold, best_FPR
